@@ -108,7 +108,7 @@ pub async fn handle_instruction(
             .exec(db)
             .await?;
         }
-        Instruction::Register =>  {
+        Instruction::Register => {
             let params = Register::deserialize(&mut ix_data)?;
             let register = instruction
                 .account_keys
@@ -124,7 +124,7 @@ pub async fn handle_instruction(
             })
             .exec(db)
             .await?;
-        },
+        }
         Instruction::Unknow => {
             return Ok(solana_indexer::ExecutorControlFlow::Skip);
         }
