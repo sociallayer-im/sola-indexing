@@ -1,0 +1,23 @@
+[package]
+name = "indexer"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+[dependencies]
+dotenv.workspace = true
+graph = { path = "../graph" }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+solana-indexer = { git = "https://github.com/sociallayer-im/solana-indexer.git" }
+base58 = "0.2.0"
+
+anchor-lang = { version = "0.29", git = "https://github.com/coral-xyz/anchor.git" }
+borsh = { version = "1.4", features = ["derive"] }
+sea-orm = { version = "0.12", features = [
+    "sqlx-postgres",
+    "runtime-async-std-native-tls",
+    "seaography",
+] }
+
+tracing-subscriber = { version = "0.3" }
+tracing = { version = "0.1" }

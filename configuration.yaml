@@ -1,0 +1,12 @@
+indexer_settings:
+  program_id: "EQyfu4KXuX8svatnYyfSHFSBGfgNsVSi8ZChuJosiu2N"
+  connection_str: "https://solana-devnet.g.alchemy.com/v2/Dz-soiIi41-HH7q1LKI38CQ5JICAUtiQ"
+  timestamp_interval: 5
+  migrate: true
+db_settings:
+  host: "localhost"
+  port: 5432
+  username: "postgres"
+  password: "postgres"
+  database_name: "indexer"
+  require_ssl: false
